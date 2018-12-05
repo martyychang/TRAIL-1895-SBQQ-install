@@ -21,6 +21,20 @@ PROJECT PATH                                                             ERROR
 force-app/main/default/installedPackages/SBQQ.installedPackage-meta.xml  Required field is missing: activateRSS
 ```
 
+## Workaround
+
+Edit the **SBQQ.installedPackage-meta.xml** file. First, delete the line below.
+
+```xml
+    <activateRSS xsi:nil="true"/>
+```
+
+Then put the following line in the same place.
+
+```xml
+    <activateRSS>false</activateRSS>
+```
+
 ## Resources
 
 * "[Push Source to the Scratch Org][1]." _Salesforce DX Developer Guide_.
